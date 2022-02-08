@@ -1,0 +1,6 @@
+C:\Users\emreozbaskan\source\repos\SiparisOtomasyon\SiparisOtomasyon.Core\bin\Debug\SiparisOtomasyon.Core.dll
+C:\Users\emreozbaskan\source\repos\SiparisOtomasyon\SiparisOtomasyon.Core\bin\Debug\SiparisOtomasyon.Core.pdb
+C:\Users\emreozbaskan\source\repos\SiparisOtomasyon\SiparisOtomasyon.Core\obj\Debug\SiparisOtomasyon.Core.csproj.AssemblyReference.cache
+C:\Users\emreozbaskan\source\repos\SiparisOtomasyon\SiparisOtomasyon.Core\obj\Debug\SiparisOtomasyon.Core.csproj.CoreCompileInputs.cache
+C:\Users\emreozbaskan\source\repos\SiparisOtomasyon\SiparisOtomasyon.Core\obj\Debug\SiparisOtomasyon.Core.dll
+C:\Users\emreozbaskan\source\repos\SiparisOtomasyon\SiparisOtomasyon.Core\obj\Debug\SiparisOtomasyon.Core.pdb
