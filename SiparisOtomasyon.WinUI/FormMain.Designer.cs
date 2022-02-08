@@ -34,10 +34,12 @@ namespace SiparisOtomasyon.WinUI
             this.newCustomerMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ürünİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.siparisİşelmleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kategToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newProductMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.siparisİşelmleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kategToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newOrderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newOrderListMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,8 +88,25 @@ namespace SiparisOtomasyon.WinUI
             this.ürünİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
             this.ürünİşlemleriToolStripMenuItem.Text = "Ürün İşlemleri";
             // 
+            // newProductMenuItem
+            // 
+            this.newProductMenuItem.Name = "newProductMenuItem";
+            this.newProductMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.newProductMenuItem.Text = "Yeni Ürün";
+            this.newProductMenuItem.Click += new System.EventHandler(this.newProductMenuItem_Click);
+            // 
+            // productListMenuItem
+            // 
+            this.productListMenuItem.Name = "productListMenuItem";
+            this.productListMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.productListMenuItem.Text = "Ürün Listesi";
+            this.productListMenuItem.Click += new System.EventHandler(this.productListMenuItem_Click);
+            // 
             // siparisİşelmleriToolStripMenuItem
             // 
+            this.siparisİşelmleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newOrderMenuItem,
+            this.newOrderListMenuItem});
             this.siparisİşelmleriToolStripMenuItem.Name = "siparisİşelmleriToolStripMenuItem";
             this.siparisİşelmleriToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
             this.siparisİşelmleriToolStripMenuItem.Text = "Siparis İşelmleri";
@@ -98,19 +117,19 @@ namespace SiparisOtomasyon.WinUI
             this.kategToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.kategToolStripMenuItem.Text = "Tanımlamalar";
             // 
-            // newProductMenuItem
+            // newOrderMenuItem
             // 
-            this.newProductMenuItem.Name = "newProductMenuItem";
-            this.newProductMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.newProductMenuItem.Text = "Yeni Ürün";
-            this.newProductMenuItem.Click += new System.EventHandler(this.newProductMenuItem_Click);
+            this.newOrderMenuItem.Name = "newOrderMenuItem";
+            this.newOrderMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newOrderMenuItem.Text = "Yeni Siparis";
+            this.newOrderMenuItem.Click += new System.EventHandler(this.newOrderMenuItem_Click);
             // 
-            // productListMenuItem
+            // newOrderListMenuItem
             // 
-            this.productListMenuItem.Name = "productListMenuItem";
-            this.productListMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.productListMenuItem.Text = "Ürün Listesi";
-            this.productListMenuItem.Click += new System.EventHandler(this.productListMenuItem_Click);
+            this.newOrderListMenuItem.Name = "newOrderListMenuItem";
+            this.newOrderListMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newOrderListMenuItem.Text = "Siparis Listesi";
+            this.newOrderListMenuItem.Click += new System.EventHandler(this.newOrderListMenuItem_Click);
             // 
             // FormMain
             // 
@@ -143,6 +162,8 @@ namespace SiparisOtomasyon.WinUI
         private System.Windows.Forms.ToolStripMenuItem customerListMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newProductMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productListMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newOrderMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newOrderListMenuItem;
     }
 }
 

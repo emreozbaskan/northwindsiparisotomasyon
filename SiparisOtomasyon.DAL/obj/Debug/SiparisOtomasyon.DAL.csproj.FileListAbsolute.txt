@@ -9,3 +9,14 @@ C:\Users\emreozbaskan\source\repos\SiparisOtomasyon\SiparisOtomasyon.DAL\obj\Deb
 C:\Users\emreozbaskan\source\repos\SiparisOtomasyon\SiparisOtomasyon.DAL\obj\Debug\SiparisOtomasyon.DAL.dll
 C:\Users\emreozbaskan\source\repos\SiparisOtomasyon\SiparisOtomasyon.DAL\obj\Debug\SiparisOtomasyon.DAL.pdb
 C:\Users\emreozbaskan\source\repos\SiparisOtomasyon\SiparisOtomasyon.DAL\obj\Debug\SiparisOtomasyon.DAL.csproj.AssemblyReference.cache
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\bin\Debug\SiparisOtomasyon.DAL.dll
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\bin\Debug\SiparisOtomasyon.DAL.pdb
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\bin\Debug\EntityFramework.dll
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\bin\Debug\EntityFramework.xml
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\obj\Debug\SiparisOtomasyon.DAL.csproj.AssemblyReference.cache
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\obj\Debug\SiparisOtomasyon.DAL.csproj.CoreCompileInputs.cache
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\obj\Debug\SiparisOtomasyon.DAL.csproj.CopyComplete
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\obj\Debug\SiparisOtomasyon.DAL.dll
+C:\MyWorkspaces\SiparisOtomasyon\SiparisOtomasyon.DAL\obj\Debug\SiparisOtomasyon.DAL.pdb

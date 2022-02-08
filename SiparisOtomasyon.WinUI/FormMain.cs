@@ -57,5 +57,15 @@ namespace SiparisOtomasyon.WinUI
         {
             this.ShowMidiForm(new ProductListForm());
         }
+
+        private void newOrderMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ShowMidiForm(new OrderForm());
+        }
+
+        private void newOrderListMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ShowMidiForm(new OrderListForm());
+        }
     }
 }

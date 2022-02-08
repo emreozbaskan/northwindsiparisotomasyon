@@ -52,11 +52,15 @@
   <ItemGroup>
     <Compile Include="Abstract\GenericRepo.cs" />
     <Compile Include="Abstract\ICustomerRepo.cs" />
+    <Compile Include="Abstract\IEmployeeRepo.cs" />
     <Compile Include="Abstract\IRepository.cs" />
+    <Compile Include="Abstract\IShipperRepo.cs" />
     <Compile Include="Abstract\ISupplierRepo.cs" />
     <Compile Include="Concrete\CategoryRepo.cs" />
     <Compile Include="Concrete\CustomerRepo.cs" />
+    <Compile Include="Concrete\EmployeeRepo.cs" />
     <Compile Include="Concrete\ProductRepo.cs" />
+    <Compile Include="Concrete\ShipperRepo.cs" />
     <Compile Include="Concrete\SupplierRepo.cs" />
     <Compile Include="Context\Category.cs">
       <DependentUpon>NorthwindModel.tt</DependentUpon>

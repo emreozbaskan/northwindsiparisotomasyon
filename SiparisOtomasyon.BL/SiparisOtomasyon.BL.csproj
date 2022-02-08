@@ -51,11 +51,15 @@
     <Compile Include="Abstract\IBusiness.cs" />
     <Compile Include="Abstract\ICategoryBusiness.cs" />
     <Compile Include="Abstract\ICustomerBusiness.cs" />
+    <Compile Include="Abstract\IEmployeeBusiness.cs" />
     <Compile Include="Abstract\IProductBusiness.cs" />
+    <Compile Include="Abstract\IShipperBusiness.cs" />
     <Compile Include="Abstract\ISupplierBusiness.cs" />
     <Compile Include="Concrete\CategoryBusiness.cs" />
     <Compile Include="Concrete\CustomerBusiness.cs" />
+    <Compile Include="Concrete\EmployeeBusiness.cs" />
     <Compile Include="Concrete\ProductBusiness.cs" />
+    <Compile Include="Concrete\ShipperBusiness.cs" />
     <Compile Include="Concrete\SupplierBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
