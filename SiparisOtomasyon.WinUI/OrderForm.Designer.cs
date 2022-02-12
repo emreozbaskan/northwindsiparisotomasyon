@@ -37,7 +37,7 @@ namespace SiparisOtomasyon.WinUI
             this.btnNew = new System.Windows.Forms.Button();
             this.btnClouse = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridOrderDetail = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtShipPostalCode = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@ namespace SiparisOtomasyon.WinUI
             this.label5 = new System.Windows.Forms.Label();
             this.dtRequiredDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtOrderDate = new System.Windows.Forms.DateTimePicker();
             this.cmbEmployee = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbCustomer = new System.Windows.Forms.ComboBox();
@@ -77,10 +77,12 @@ namespace SiparisOtomasyon.WinUI
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbProduct = new System.Windows.Forms.ComboBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblToplam = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridOrderDetail)).BeginInit();
             this.panel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuFreight)).BeginInit();
@@ -88,6 +90,7 @@ namespace SiparisOtomasyon.WinUI
             ((System.ComponentModel.ISupportInitialize)(this.nuDiscount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUnitPrice)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,6 +134,7 @@ namespace SiparisOtomasyon.WinUI
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Sil";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -141,6 +145,7 @@ namespace SiparisOtomasyon.WinUI
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Kaydet";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnNew
             // 
@@ -151,6 +156,7 @@ namespace SiparisOtomasyon.WinUI
             this.btnNew.TabIndex = 2;
             this.btnNew.Text = "Yeni";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnClouse
             // 
@@ -162,24 +168,31 @@ namespace SiparisOtomasyon.WinUI
             this.btnClouse.TabIndex = 1;
             this.btnClouse.Text = "Kapat";
             this.btnClouse.UseVisualStyleBackColor = true;
+            this.btnClouse.Click += new System.EventHandler(this.btnClouse_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.gridOrderDetail);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 349);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(965, 262);
             this.panel2.TabIndex = 4;
             // 
-            // dataGridView1
+            // gridOrderDetail
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(965, 262);
-            this.dataGridView1.TabIndex = 0;
+            this.gridOrderDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridOrderDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridOrderDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridOrderDetail.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.gridOrderDetail.Location = new System.Drawing.Point(0, 0);
+            this.gridOrderDetail.Name = "gridOrderDetail";
+            this.gridOrderDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridOrderDetail.Size = new System.Drawing.Size(965, 262);
+            this.gridOrderDetail.TabIndex = 0;
+            this.gridOrderDetail.DataSourceChanged += new System.EventHandler(this.gridOrderDetail_DataSourceChanged);
+            this.gridOrderDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridOrderDetail_CellDoubleClick);
             // 
             // panel4
             // 
@@ -193,7 +206,7 @@ namespace SiparisOtomasyon.WinUI
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.dtRequiredDate);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.dateTimePicker1);
+            this.panel4.Controls.Add(this.dtOrderDate);
             this.panel4.Controls.Add(this.cmbEmployee);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.cmbCustomer);
@@ -403,12 +416,12 @@ namespace SiparisOtomasyon.WinUI
             this.label4.TabIndex = 4;
             this.label4.Text = "Sipariş Tarih";
             // 
-            // dateTimePicker1
+            // dtOrderDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(557, 15);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(119, 25);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtOrderDate.Location = new System.Drawing.Point(557, 15);
+            this.dtOrderDate.Name = "dtOrderDate";
+            this.dtOrderDate.Size = new System.Drawing.Size(119, 25);
+            this.dtOrderDate.TabIndex = 3;
             // 
             // cmbEmployee
             // 
@@ -471,6 +484,7 @@ namespace SiparisOtomasyon.WinUI
             this.btnOrderDetailDelete.TabIndex = 18;
             this.btnOrderDetailDelete.Text = "Sil";
             this.btnOrderDetailDelete.UseVisualStyleBackColor = true;
+            this.btnOrderDetailDelete.Click += new System.EventHandler(this.btnOrderDetailDelete_Click);
             // 
             // btnOrderDetailAdd
             // 
@@ -481,6 +495,7 @@ namespace SiparisOtomasyon.WinUI
             this.btnOrderDetailAdd.TabIndex = 17;
             this.btnOrderDetailAdd.Text = "Ekle";
             this.btnOrderDetailAdd.UseVisualStyleBackColor = true;
+            this.btnOrderDetailAdd.Click += new System.EventHandler(this.btnOrderDetailAdd_Click);
             // 
             // nuDiscount
             // 
@@ -504,7 +519,6 @@ namespace SiparisOtomasyon.WinUI
             this.label18.Size = new System.Drawing.Size(51, 17);
             this.label18.TabIndex = 15;
             this.label18.Text = "İndirim";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // nuQuantity
             // 
@@ -568,6 +582,25 @@ namespace SiparisOtomasyon.WinUI
             this.cmbProduct.Size = new System.Drawing.Size(285, 25);
             this.cmbProduct.TabIndex = 0;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.lblToplam);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 230);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(965, 32);
+            this.panel6.TabIndex = 1;
+            // 
+            // lblToplam
+            // 
+            this.lblToplam.AutoSize = true;
+            this.lblToplam.ForeColor = System.Drawing.Color.Red;
+            this.lblToplam.Location = new System.Drawing.Point(660, 6);
+            this.lblToplam.Name = "lblToplam";
+            this.lblToplam.Size = new System.Drawing.Size(104, 17);
+            this.lblToplam.TabIndex = 0;
+            this.lblToplam.Text = "Toplam : 0.00 TL";
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -584,11 +617,13 @@ namespace SiparisOtomasyon.WinUI
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridOrderDetail)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -599,6 +634,8 @@ namespace SiparisOtomasyon.WinUI
             ((System.ComponentModel.ISupportInitialize)(this.nuDiscount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuUnitPrice)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -615,13 +652,13 @@ namespace SiparisOtomasyon.WinUI
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridOrderDetail;
         private System.Windows.Forms.ComboBox cmbCustomer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbEmployee;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtOrderDate;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtShippedDate;
         private System.Windows.Forms.Label label5;
@@ -653,5 +690,7 @@ namespace SiparisOtomasyon.WinUI
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnOrderDetailDelete;
         private System.Windows.Forms.Button btnOrderDetailAdd;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lblToplam;
     }
 }

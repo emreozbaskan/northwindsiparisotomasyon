@@ -29,8 +29,22 @@ namespace SiparisOtomasyon.WinUI.Helper
             combo.DisplayMember = "Key";
             combo.ValueMember = "Value";
         }
+        /// <summary>
+        /// combobox üzerinde eğer bir datasource atanmış ise bu method ise unboxing yapmadan değeri geri okuyabilirim
+        /// </summary>
+        /// <typeparam name="TValue">Value tipi</typeparam>
+        /// <typeparam name="TData">Datanın Tipi </typeparam>
+        /// <param name="combo"></param>
+        /// <returns></returns>
 
-        public static void SetSelectedValue(this ComboBox combo,object value)
+        public static TValue? GetValue<TValue, TData>(this ComboBox combo)
+            where TValue : struct
+            where TData : class
+        {
+            return ((combo.DataSource as List<KeyValue<TValue, TData>>)[combo.SelectedIndex]).Value;
+        }
+
+        public static void SetSelectedValue(this ComboBox combo, object value)
         {
             if (value != null)
                 combo.SelectedValue = value;

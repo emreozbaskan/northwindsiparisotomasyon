@@ -74,7 +74,30 @@ namespace SiparisOtomasyon.WinUI.Helper
                 {
                     FormClear(control as Panel);
                 }
+                else if (control is GroupBox)
+                {
+                    FormClear(control as GroupBox);
+                }
+                else if (control is DateTimePicker)
+                {
+                    (control as DateTimePicker).Value = DateTime.Now;
+
+                }
+
+
+                //switch (control)
+                //{
+                //    case MaskedTextBox mt:
+                //    case TextBox c: {
+                //            (control as TextBox).Clear();
+                //            break; }
+
+                //}
+
+
             }
+
+
         }
     }
 }
